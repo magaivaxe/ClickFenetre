@@ -17,7 +17,9 @@ public class ClickFenetre
      */
     public static void main(String[] args) 
     {
+        //Window object
         MaFenetre fen = new MaFenetre();
+        
     }
     
 }

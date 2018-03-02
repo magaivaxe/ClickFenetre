@@ -9,7 +9,8 @@ import java.awt.event.MouseEvent;
  */
 
 /**
- *
+ * With the mouse adpter it is possible call juste the necessaries methods
+ * instead call all methods implements MouseListener directly
  * @author sire_marcos
  */
 public class EcouterSouris extends MouseAdapter

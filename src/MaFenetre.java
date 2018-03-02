@@ -5,21 +5,38 @@
  */
 
 
+import java.awt.Container;
+import java.awt.FlowLayout;
+import javax.swing.JButton;
 import javax.swing.JFrame;
 
 /**
- *
+ * 
  * @author sire_marcos
  */
 public class MaFenetre extends JFrame
 {
-    EcouterSouris souris= new EcouterSouris();
-    //Constructor without public first
+    //Mouse object
+    EcouterSouris souris = new EcouterSouris();
+    //Button object
+    private JButton monButton; 
+    //Variable cont type container
+    Container cont = getContentPane();
+    
+    //Constructor without public at first. It is possible.
+    //MaFenetre build itself to call the JFrame methods directly. 
     public MaFenetre()
     {
+        //Call the mouse listener 
         addMouseListener(souris);
+        //Window sets
         setTitle("Gestion des Clics");
-        setBounds(10, 20, 300, 200);
+        setBounds(10, 20, 600, 600);
+        //Button sets
+        monButton = new JButton("Essai!");
+        cont.setLayout(new FlowLayout());
+        cont.add(monButton);
+        //It have to be the last to all show
         setVisible(true);
     }
 
