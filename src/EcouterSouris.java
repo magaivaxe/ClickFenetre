@@ -1,5 +1,6 @@
 
 import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 
 /*
  * To change this license header, choose License Headers in Project Properties.
@@ -19,5 +20,13 @@ public class EcouterSouris extends MouseAdapter
         
     }
     
-    
+    @Override
+    public void mouseClicked(MouseEvent e)
+    {
+        //This method get the x and y values and print on terminal
+        int x = e.getX();
+        int y = e.getY();
+        System.out.println("Ils sont " + x + ", " + y);
+    }
+
 }
