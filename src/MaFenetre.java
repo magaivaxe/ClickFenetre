@@ -22,9 +22,13 @@ public class MaFenetre extends JFrame
     private JButton monButton; 
     //Variable cont type container
     Container cont = getContentPane();
-    
-    //Constructor without public at first. It is possible.
-    //MaFenetre build itself to call the JFrame methods directly. 
+   
+    /**
+     * Constructor without public at first. It is possible. MaFenetre building
+     * and calling the JFrame methods directly. Because MaFenetre is a extends
+     * of JFrame.
+     * setVisible must be the last to show all.
+     */
     public MaFenetre()
     {
         //Call the mouse listener 
@@ -36,7 +40,7 @@ public class MaFenetre extends JFrame
         monButton = new JButton("Essai!");
         cont.setLayout(new FlowLayout());
         cont.add(monButton);
-        //It have to be the last to all show
+        //Show all
         setVisible(true);
     }
 
