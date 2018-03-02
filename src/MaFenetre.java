@@ -5,13 +5,13 @@
  */
 
 
-import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import javax.swing.JFrame;
 
 /**
- *
+ * Abstract declaration of mouse clicked from the constructor EcouterSouris()
+ * becouse this constructor extends MouseAdapter (Source method) that could call just the 
+ * necessaries methods 
  * @author sire_marcos
  */
 public class MaFenetre extends JFrame
