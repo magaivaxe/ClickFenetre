@@ -17,19 +17,20 @@ import javax.swing.JFrame;
 public class MaFenetre extends JFrame
 {
     //Constructor without public first
-    MaFenetre()
+    public MaFenetre()
     {
-        setTitle("Gestion des Clics");
-        setBounds(10, 20, 300, 200);
-        addMouseListener(new MouseAdapter()
-        {public void mouseClicked(MouseEvent e)
-            {                  
-                //This method get the x and y values and print on terminal
+        addMouseListener(new EcouterSouris()
+        { 
+            @Override
+            public void mouseClicked(MouseEvent e)
+            {
                 int x = e.getX();
                 int y = e.getY();
-                System.out.println("Ils sont " + x + ", " + y);
+                System.out.println("Clicked on " + x + ", " + y);
             }
         });
+        setTitle("Gestion des Clics");
+        setBounds(10, 20, 300, 200);
         setVisible(true);
     }
 
