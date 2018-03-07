@@ -57,23 +57,15 @@ public class MaFenetre extends JFrame implements ActionListener
     /**
      * button action add by actionListener that it is a interface ou abstract
      * method. This method is used by the two buttons
-     * @param e event or action performed by button
+     * @param event action performed by button
      */
     @Override
-    public void actionPerformed(ActionEvent e)
+    public void actionPerformed(ActionEvent event)
     {
-        //condition to differentiate two or more buttons according to the your
-        //source (getSource) and convert to int with hashCode()
-        if (e.getSource() == monButton1)
-        {
-            System.out.println("action sur " + monButton1.getText());
-        }
-        if (e.getSource() == monButton2)
-        {
-            System.out.println("action sur " + monButton2.getText());
-        }
-       
-        
+        //Return to a variable a String that it did was an attribution
+        String nom = event.getActionCommand();
+        //
+        System.out.println("Action on " + nom);
     }
 
     
