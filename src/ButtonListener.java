@@ -14,6 +14,14 @@ import java.awt.event.ActionListener;
  */
 public class ButtonListener implements ActionListener
 {
+    //Fields
+    private int n;
+    /**
+     * Constructor that sends a int value
+     * @param n Integer value passed to 
+     */
+    public ButtonListener(int n) { this.n = n; }
+    
 
     /**
      * button action add by actionListener that it is a interface ou abstract
@@ -23,7 +31,7 @@ public class ButtonListener implements ActionListener
     @Override
     public void actionPerformed(ActionEvent event)
     {
-        System.out.println("Action on Button A");
+        System.out.println("Action on Button " + n);
     } 
     
 }
