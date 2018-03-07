@@ -20,6 +20,7 @@ public class MaFenetre extends JFrame
     //------------------ Objects ------------------
     //Mouse object/instance
     EcouterSouris souris = new EcouterSouris();
+    //Buttons listeners one for each button
     ButtonListener1 bListener1 = new ButtonListener1();
     ButtonListener2 bListener2 = new ButtonListener2();
     //Button object/instances
