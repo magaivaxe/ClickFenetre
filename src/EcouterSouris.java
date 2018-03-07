@@ -27,7 +27,7 @@ public class EcouterSouris extends MouseAdapter
         //This method get the x and y values and print on terminal
         int x = e.getX();
         int y = e.getY();
-        System.out.println("Ils sont " + x + ", " + y);
+        System.out.println("Ils sont x: " + x + ", and y: " + y);
     }
 
 }
