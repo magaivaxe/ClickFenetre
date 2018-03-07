@@ -8,7 +8,6 @@
 import java.awt.Container;
 import java.awt.FlowLayout;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -16,15 +15,18 @@ import javax.swing.JFrame;
  * 
  * @author sire_marcos
  */
-public class MaFenetre extends JFrame implements ActionListener
+public class MaFenetre extends JFrame
 {
+    //------------------ Objects ------------------
     //Mouse object/instance
     EcouterSouris souris = new EcouterSouris();
+    ButtonListener1 bListener1 = new ButtonListener1();
+    ButtonListener2 bListener2 = new ButtonListener2();
     //Button object/instances
     private JButton monButton1, monButton2; 
     //Variable cont type container
     Container content = getContentPane();
-   
+    //---------------------------------------------
     /**
      * Constructor without public at first. It is possible. MaFenetre building
      * and calling the JFrame methods directly. Because MaFenetre is a extends
@@ -50,26 +52,14 @@ public class MaFenetre extends JFrame implements ActionListener
         content.add(monButton1);
         content.add(monButton2);
         //Add an action listener (Interface) to button and the listener is 
-        //MaFenetre itself (this)
-        monButton1.addActionListener(this);
-        monButton2.addActionListener(this);
+        //an object to each class and button
+        monButton1.addActionListener(bListener1);
+        monButton2.addActionListener(bListener2);
         //Show all and visible. This method must be the last allways, else 
         //anything will be invisible
         setVisible(true);
     }
-    /**
-     * button action add by actionListener that it is a interface ou abstract
-     * method. This method is used by the two buttons
-     * @param event action performed by button
-     */
-    @Override
-    public void actionPerformed(ActionEvent event)
-    {
-        //Return to a variable a String that it did was an attribution
-        String nom = event.getActionCommand();
-        //
-        System.out.println("Action on " + nom);
-    }     
+        
 
     
     
