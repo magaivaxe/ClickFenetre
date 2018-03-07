@@ -7,7 +7,6 @@
 
 import java.awt.Container;
 import java.awt.FlowLayout;
-import java.awt.event.ActionEvent;
 import javax.swing.JButton;
 import javax.swing.JFrame;
 
@@ -21,8 +20,8 @@ public class MaFenetre extends JFrame
     //Mouse object/instance
     EcouterSouris souris = new EcouterSouris();
     //Buttons listeners one for each button
-    ButtonListener1 bListener1 = new ButtonListener1();
-    ButtonListener2 bListener2 = new ButtonListener2();
+    ButtonListener bListener1 = new ButtonListener();
+    ButtonListener bListener2 = new ButtonListener();
     //Button object/instances
     private JButton monButton1, monButton2; 
     //Variable cont type container

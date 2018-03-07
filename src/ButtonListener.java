@@ -12,7 +12,7 @@ import java.awt.event.ActionListener;
  *
  * @author eleves
  */
-public class ButtonListener1 implements ActionListener
+public class ButtonListener implements ActionListener
 {
 
     /**
