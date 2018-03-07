@@ -44,13 +44,15 @@ public class MaFenetre extends JFrame implements ActionListener
         cont.setLayout(new FlowLayout());
         //Add the button to window container
         cont.add(monButton);
-        //Add an action listener to button and the listener is MaFenetre itself
+        //Add an action listener (Interface) to button and the listener is 
+        //MaFenetre itself
         monButton.addActionListener(this);
         //Show all
         setVisible(true);
     }
     /**
-     * button action
+     * button action add by actionListener that it is a interfece ou abstract
+     * method
      * @param e event or action performed by button
      */
     @Override
