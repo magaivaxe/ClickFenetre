@@ -38,9 +38,12 @@ public class MaFenetre extends JFrame implements ActionListener
         //Window sets
         setTitle("With two buttons");
         setBounds(10, 20, 600, 600);
-        //Button sets
+        //Button sets, by default this String is the ActionCommand
         monButton1 = new JButton("Button A");
         monButton2 = new JButton("Button B");
+        //We can set an other action command by...
+        monButton1.setActionCommand("My button A");
+        monButton2.setActionCommand("My button B");
         //Set the layout to button
         content.setLayout(new FlowLayout());
         //Add the buttons to window container
@@ -66,7 +69,7 @@ public class MaFenetre extends JFrame implements ActionListener
         String nom = event.getActionCommand();
         //
         System.out.println("Action on " + nom);
-    }
+    }     
 
     
     
