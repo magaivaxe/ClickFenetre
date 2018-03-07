@@ -18,12 +18,12 @@ import javax.swing.JFrame;
  */
 public class MaFenetre extends JFrame implements ActionListener
 {
-    //Mouse object
+    //Mouse object/instance
     EcouterSouris souris = new EcouterSouris();
-    //Button object
-    private JButton monButton; 
+    //Button object/instances
+    private JButton monButton1, monButton2; 
     //Variable cont type container
-    Container cont = getContentPane();
+    Container content = getContentPane();
    
     /**
      * Constructor without public at first. It is possible. MaFenetre building
@@ -36,18 +36,22 @@ public class MaFenetre extends JFrame implements ActionListener
         //Call the mouse listener 
         addMouseListener(souris);
         //Window sets
-        setTitle("Gestion des Clics");
+        setTitle("With two buttons");
         setBounds(10, 20, 600, 600);
         //Button sets
-        monButton = new JButton("Essai!");
+        monButton1 = new JButton("Button A");
+        monButton2 = new JButton("Button B");
         //Set the layout to button
-        cont.setLayout(new FlowLayout());
-        //Add the button to window container
-        cont.add(monButton);
+        content.setLayout(new FlowLayout());
+        //Add the buttons to window container
+        content.add(monButton1);
+        content.add(monButton2);
         //Add an action listener (Interface) to button and the listener is 
-        //MaFenetre itself
-        monButton.addActionListener(this);
-        //Show all
+        //MaFenetre itself (this)
+        monButton1.addActionListener(this);
+        monButton2.addActionListener(this);
+        //Show all and visible. This method must be the last allways, else 
+        //anything will be invisible
         setVisible(true);
     }
     /**
